@@ -80,8 +80,9 @@ footer {
   background: #fff;
   color: #bbb;
   font-weight: 100;
+  font-size: 0.8em;
 }
-/* line 11, ../sass/_footer.scss */
+/* line 12, ../sass/_footer.scss */
 footer .content {
   position: absolute;
   width: 100%;
@@ -90,15 +91,15 @@ footer .content {
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
 }
-/* line 20, ../sass/_footer.scss */
+/* line 21, ../sass/_footer.scss */
 footer .content .social-media-icons li {
   display: inline-block;
 }
-/* line 23, ../sass/_footer.scss */
+/* line 24, ../sass/_footer.scss */
 footer .content .social-media-icons li a {
   color: #bbb;
   padding: 0 10px;
-  font-size: 1.25em;
+  font-size: 1.5em;
 }
 
 /* line 5, ../sass/main.scss */
