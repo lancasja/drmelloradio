@@ -11,7 +11,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* line 15, ../sass/_globals.scss */
@@ -74,7 +74,7 @@ header .brand img {
 footer {
   width: 100%;
   height: 120px;
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   background: #fff;
@@ -103,11 +103,12 @@ footer .content .social-media-icons li a {
 
 /* line 5, ../sass/main.scss */
 .grid {
-  position: absolute;
+  position: relative;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 292px);
+  margin-top: 150px;
 }
-/* line 10, ../sass/main.scss */
+/* line 11, ../sass/main.scss */
 .grid .grid-item {
   background: #fff;
   border: 3px solid #d8d8d8;
@@ -117,20 +118,18 @@ footer .content .social-media-icons li a {
   transform: translateX(-50%);
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
   width: 445px;
-  height: 352px;
   transition: all 0.5s ease;
   overflow: hidden;
 }
 /* line 23, ../sass/main.scss */
 .grid .grid-item:hover {
   width: 450px;
-  height: 357px;
 }
-/* line 27, ../sass/main.scss */
+/* line 26, ../sass/main.scss */
 .grid .grid-item:hover .content {
   opacity: 0.8;
 }
-/* line 32, ../sass/main.scss */
+/* line 31, ../sass/main.scss */
 .grid .grid-item .content {
   position: relative;
   width: 100%;
@@ -138,36 +137,45 @@ footer .content .social-media-icons li a {
   opacity: 0.7;
   transition: opacity 0.4s ease;
 }
-/* line 39, ../sass/main.scss */
-.grid .grid-item .content iframe {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-}
-/* line 46, ../sass/main.scss */
-.grid .grid-item .content img {
-  height: 100%;
+/* line 45, ../sass/main.scss */
+.grid .grid-item .content .embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
 }
 /* line 53, ../sass/main.scss */
+.grid .grid-item .content .embed-container iframe, .grid .grid-item .content .embed-container object, .grid .grid-item .content .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 61, ../sass/main.scss */
+.grid .grid-item .content img {
+  margin-bottom: -4px;
+}
+/* line 68, ../sass/main.scss */
 .grid .on-top {
   z-index: 999 !important;
 }
-/* line 56, ../sass/main.scss */
+/* line 71, ../sass/main.scss */
 .grid .on-top .content {
   opacity: 1 !important;
 }
-/* line 61, ../sass/main.scss */
+/* line 76, ../sass/main.scss */
 .grid .pos00 {
   transform: translate3d(-400px, -100px, 0);
   z-index: 1;
 }
-/* line 66, ../sass/main.scss */
+/* line 81, ../sass/main.scss */
 .grid .pos01 {
   transform: translate3d(0, -130px, 0);
   z-index: 2;
 }
-/* line 71, ../sass/main.scss */
+/* line 86, ../sass/main.scss */
 .grid .pos02 {
   transform: translate3d(-140px, 90px, 0);
   z-index: 1;
