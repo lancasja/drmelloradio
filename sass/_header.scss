@@ -18,4 +18,74 @@ header {
 			margin-left: 6px;
 		}
 	}
+
+	nav {
+		position: absolute;
+		top: 30px;
+		right: 40px;
+
+		ul li {
+			display: inline-block;
+			margin-left: 3em;
+
+			a {
+				color: rgba(255, 255, 255, 0.7);
+				transition: all 0.4s ease;
+
+				&:hover {
+					color: rgba(255, 255, 255, 1);
+				}
+			}
+		}
+
+		.contact-form {
+			width: 400px;
+			@include background-image(linear-gradient(#fff, #eee));
+			position: absolute;
+			right: 4px;
+			top: 64px;
+			padding: 2em;
+			z-index: 9999;
+			border-radius: 4px 0px 4px 4px;
+
+			display: none;
+			opacity: 0;
+
+			h3 {
+				font-size: 120%;
+			}
+
+			&::before {
+				content: "";
+				width: 0; 
+				height: 0; 
+				border-left: 20px solid transparent;
+				border-right: 0px solid transparent;
+				border-bottom: 15px solid #fff;
+				position: absolute;
+				top: -15px;
+				right: 0;
+			}
+
+			input {
+				height: 50px;
+				width: 100%;
+				display: block;
+				margin: 18px auto;
+				text-indent: 1em;
+				font-size: 100%;
+			}
+
+			button {
+				display: block;
+				margin: 0 auto;
+				height: 44px;
+				width: 50%;
+				border: none;
+				@include background-image(linear-gradient(#333, #444));
+				color: #fff;
+				font-size: 100%;
+			}
+		}
+	}
 }
